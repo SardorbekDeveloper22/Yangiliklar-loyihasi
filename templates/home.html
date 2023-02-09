@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yangiliklar</title>
+	<style>
+		html{
+			background-color: #DFB09D;
+		}
+		.card {
+		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		  transition: 0.3s;
+		  width: 70%;
+		  margin: 20px 15%;
+		  border-radius: 5px;
+		  background-color: #E14C10;
+		}
+
+		.card h1,h2,h3,h4,h5,h6{
+			font-size: 30px;
+			text-align: center;
+		}
+		.card p{
+			font-size: 18px;
+		}
+
+		.card:hover {
+		  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+
+		/* img {
+		  border-radius: 5px 5px 0 0;
+		} */
+
+		.container {
+		  padding: 2px 16px;
+		}
+		.h1{
+			text-align: center; 
+			color:#F4CE56;
+			padding: 9px;
+			background-color: #F09575;
+			border: 2px solid; black;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="h1">Xabarlar doskasi | Yangiliklar</h1>
+	{% for post in object_list %}
+		<div class="card">
+		  {# <img src="img_avatar2.png" alt="Avatar" style="width:100%"> #}
+		  <div class="container">
+				<h2>{{ post.title }}</h2>
+				<p>{{ post.text }}</p>
+		  </div>
+		</div>
+	{% endfor %}
+</body>
+</html>
